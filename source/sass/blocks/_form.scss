@@ -1,0 +1,96 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form__input {
+  margin-bottom: 0.938rem;
+  padding: 1rem;
+  min-width: 250px;
+  border: none;
+  background-color: $color-dark-blue;
+  text-align: center;
+  border-radius: $border-radius;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: $color-white;
+  font-weight: 400;
+
+  &::placeholder {
+    font-weight: 400;
+    color: $color-white;
+    opacity: 0.4;
+  }
+
+  &:focus-visible {
+    border: 1px solid $color-blue-wave;
+  }
+
+  &:user-invalid{
+    border: 1px solid $color-pink-light;
+    color: $color-pink-light;
+
+    &::placeholder {
+      color: $color-pink-light;
+      opacity: 1;
+    }
+  }
+
+  &:invalid:not(:placeholder-shown){
+    border: 1px solid $color-pink-light;
+    color: $color-pink-light;
+
+    &::placeholder {
+      color: $color-pink-light;
+      opacity: 1;
+    }
+  }
+
+  @include desktop {
+    width: 568px;
+    padding-block: 1.125rem;
+  }
+}
+
+
+.form__button {
+  min-width: 250px;
+  padding: 0.563rem 3.75rem;
+  color: $color-white;
+  border: none;
+  background-color: $color-pink;
+  border-radius: $border-radius;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+
+  &:hover {
+    box-shadow: 0 0 30px 2px $color-pink-light;
+    color: $color-darkest-blue;
+    opacity: 1;
+    background-color: $color-white;
+  }
+
+  &:active {
+    box-shadow: none;
+    color: $color-darkest-blue;
+    background-color: $color-white;
+    opacity: 1;
+  }
+
+  &:disabled {
+    box-shadow: none;
+    color: $color-darkest-blue;
+    background-color: $color-white;
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  @include desktop {
+    padding-block: 1.125rem;
+    width: 568px;
+  }
+}

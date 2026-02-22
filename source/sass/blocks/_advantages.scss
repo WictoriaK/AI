@@ -1,0 +1,73 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.advantages__title {
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+  font-family: $heading-font;
+  font-weight: 500;
+  font-size: clamp(2rem, 10vw, 5rem);
+  letter-spacing: 2%;
+  line-height: 0.9;
+  text-align: center;
+  color: white;
+
+  &::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: -1;
+    bottom: 75%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: clamp(2rem, 11.1111vw, 13.313rem);
+    font-family: "Involve", Arial, sans-serif;
+    font-weight: 900;
+
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    text-stroke: 1px rgba(255, 255, 255, 0.1);
+    paint-order: stroke fill;
+
+    @include tablet {
+      bottom: 74%;
+      transform: translate(-50%, 0%);
+    }
+
+    @include pre-desktop{
+      bottom: 30%;
+      transform: translate(-50%, 0%);
+    }
+
+
+    @include desktop {
+      top: 6.625rem;
+    }
+
+    @include max-desktop {
+      top: 5rem;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+.advantages__text {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: clamp(0.8rem, 4.4444vw, 1.5rem);
+  line-height: 1.1;
+
+  span {
+    color: $color-pink-light;
+  }
+
+  @include desktop {
+    margin-bottom: 6rem;
+    padding-inline: 16.25rem;
+  }
+}
+

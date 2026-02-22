@@ -1,0 +1,54 @@
+@use 'variables.scss' as *;
+
+body {
+  position: relative;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  color: $color-white;
+  background-color: $color-darkest-blue;
+
+  &.menu-open {
+    .page-main {
+      filter: blur(3px);
+    }
+  }
+
+  &.modal-open {
+    .page-main {
+      filter: blur(3px);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.backdrop-title {
+  position: relative;
+  z-index: 2;
+}
+
+.main-wrapper {
+  overflow: hidden;
+
+  //&.open {
+  //  filter: blur(3px);
+  //}
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+}
+
+

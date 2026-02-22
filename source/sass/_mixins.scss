@@ -1,0 +1,42 @@
+@use './variables.scss' as *;
+
+@mixin fluid-text($max: 48, $min: 14) {
+  font-size: clamp(#{min}px, #{max / 1400 * 100}vw, #{max}px);
+}
+
+@mixin only-mobile {
+  @media (max-width: $mobile-only) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin pre-desktop {
+  @media (min-width: $pre-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin max-desktop {
+  @media (min-width: $max-desktop) {
+    @content;
+  }
+}
+

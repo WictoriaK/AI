@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Evolventa';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("../fonts/Evolventa-Regular.woff2") format("woff2"),
+    url("../fonts/Evolventa-Regular.woff") format("woff"),
+    url("../fonts/Evolventa-Regular.ttf") format("truetype"),
+    url("../fonts/Evolventa-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("../fonts/Involve-Bold.woff2") format("woff2"),
+    url("../fonts/Involve-Bold.woff") format("woff"),
+    url("../fonts/Involve-Bold.ttf") format("truetype"),
+    url("../fonts/Involve-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("../fonts/Involve-Medium.woff2") format("woff2"),
+    url("../fonts/Involve-Medium.woff") format("woff"),
+    url("../fonts/Involve-Medium.ttf") format("truetype"),
+    url("../fonts/Involve-Medium.otf") format("opentype");
+  font-display: swap;
+}

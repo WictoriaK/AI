@@ -1,0 +1,66 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.938rem;
+  padding-inline: 1.313rem;
+  position: relative;
+  z-index: 1;
+
+  @include pre-desktop {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  @include desktop {
+    max-width: 974px;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    margin-inline: auto;
+  }
+}
+
+.benefit-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  padding: 1.313rem;
+  width: 100%;
+  background-color: $color-darker-blue;
+  border-radius: $border-radius;
+
+  @include pre-desktop {
+    width: 15.625rem;
+  }
+
+  @include desktop {
+    width: 28.125rem;
+    padding: 1.875rem 1.875rem 6.75rem 1.875rem;
+
+    &:nth-child(3) {
+      .benefit__title {
+        padding-right: 74px;
+      }
+    }
+
+    &:last-child {
+      .benefit__title {
+        padding-right: 74px;
+      }
+    }
+  }
+
+
+}
+
+.benefit__title {
+  font-size: clamp(0.8rem, 4.4444vw, 1.5rem);
+  font-weight: 500;
+
+}
+
+.benefit__text {
+  font-size: clamp(0.7rem, 3.3333vw, 1rem);
+}
