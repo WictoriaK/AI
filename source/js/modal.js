@@ -3,9 +3,9 @@ import {isEnterKey, isEscapeKey} from './utils.min.js';
 const bodyElement = document.querySelector('body');
 const openModalButtons = document.querySelectorAll('.modal-button');
 const modalElement = document.querySelector('.modal-wrapper');
-const mainBlock = document.querySelector('.main-wrapper');
 const closeModalButton = modalElement.querySelector('.modal__close');
 const mainMenuElement = document.querySelector('.main-nav-list');
+const pageHeaderToggler = document.querySelector('.page-header__toggler');
 
 
 const onPopupEscKeydown = (evt) => {
@@ -21,7 +21,8 @@ const openModal = () => {
   bodyElement.classList.remove('menu-open');
   mainMenuElement.classList.remove('main-nav-list--open');
   mainMenuElement.classList.add('main-nav-list--closed');
-  mainBlock.classList.add('open');
+  pageHeaderToggler.classList.remove('page-header__toggler--open');
+  pageHeaderToggler.classList.add('page-header__toggler--closed');
   modalElement.classList.remove('hidden');
 
   document.addEventListener('keydown', onPopupEscKeydown);
@@ -29,7 +30,6 @@ const openModal = () => {
 
 const closeModal = () => {
   bodyElement.classList.remove('modal-open');
-  mainBlock.classList.remove('open');
   modalElement.classList.add('hidden');
 
   document.removeEventListener('keydown', onPopupEscKeydown);

@@ -16,7 +16,7 @@ body {
   }
 
   &.modal-open {
-    .page-main {
+    .main-wrapper  {
       filter: blur(3px);
     }
   }
