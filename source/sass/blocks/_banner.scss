@@ -1,0 +1,122 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.banner {
+  margin-bottom: 3.75rem;
+
+
+  @include tablet {
+    margin-bottom: 5rem;
+  }
+
+
+  @include pre-desktop {
+    margin-bottom: 5.5rem;
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+}
+
+.banner__img-wrapper {
+  margin-bottom: 1.125rem;
+
+  @include desktop {
+    order: 2;
+  }
+}
+
+.banner__img {
+  margin-inline: auto;
+
+  @include desktop {
+    width: 986px;
+    height: auto;
+  }
+}
+
+.banner__title {
+  font-family: $heading-font;
+  font-weight: 500;
+  font-size: clamp(2rem, 10vw, 5rem);
+  margin-bottom: 1.125rem;
+
+
+  span {
+    display: inline-block;
+    margin-bottom: 0.125rem;
+    font-size: clamp(3rem, 14vw, 7.5rem);
+
+    background-image: linear-gradient(to right, $color-pink-light 0%, $color-blue 44%, $color-blue-wave 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include desktop {
+    margin-bottom: 1.875rem;
+    text-align: left;
+  }
+}
+
+.banner__text {
+  margin-bottom: 1.875rem;
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include desktop {
+    margin-bottom: 4.5rem;
+    text-align: left;
+  }
+}
+
+.banner__button {
+  padding-inline: 2.5rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: $border-radius;
+  background-color: $color-pink;
+  padding-block: 0.938rem;
+  border: none;
+  color: $color-white;
+  font-size: clamp(0.8rem, 2.1vw, 1.5rem);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 30px 2px $color-pink-light;
+    color: $color-darkest-blue;
+    opacity: 1;
+    background-color: $color-white;
+  }
+
+  &:active {
+    box-shadow: none;
+    color: $color-darkest-blue;
+    background-color: $color-white;
+    opacity: 1;
+  }
+
+  &:disabled {
+    box-shadow: none;
+    color: $color-darkest-blue;
+    background-color: $color-white;
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 1.125rem 1.5rem ;
+  }
+}

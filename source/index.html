@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AI - Нейросеть может все!</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+  <header class="page-header">
+    <nav class="page-header__nav">
+      <div class="page-header__bar">
+        <a class="page-header__logo-link" href="#">
+          <img class="page-header__logo" src="img/header-logo.svg" alt="AI logo" width="103" height="48">
+        </a>
+        <button class="page-header__toggler page-header__toggler--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
+
+      <ul class="page-header__nav-list main-nav-list main-nav-list--closed main-nav-list--nojs">
+        <li class="main-nav-list__item">
+          <a class="main-nav-list__link" href="#" aria-current="page">
+            Главная
+          </a>
+        </li>
+        <li class="main-nav-list__item">
+          <a class="main-nav-list__link" href="#advantages">
+            Преимущества
+          </a>
+        </li>
+        <li class="main-nav-list__item">
+          <button class="main-nav-list__button modal-button" type="button">Получить доступ</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <main class="page-main container">
+      <h1 class="visually-hidden">Изучите нейросеть как профи</h1>
+
+      <section class="banner">
+        <h2 class="visually-hidden">Вводный блок</h2>
+        <div class="banner__img-wrapper">
+          <picture>
+            <source srcset="img/main-top-desktop.webp, img/main-top-desktop@2x.webp 2x" media="(min-width: 1024px)">
+            <img class="banner__img" src="img/main-top-mobile.webp" srcset="img/main-top-mobile@2x.webp 2x" alt="Изображение ноутбука" width="338" height="347">
+          </picture>
+        </div>
+        <div class="banner__inner">
+          <h2 class="banner__title"><span>Нейросеть</span> может все!</h2>
+          <p class="banner__text">Мы уже живем в этой удивительной реальности</p>
+          <button class="banner__button modal-button">Погрузиться в новый мир</button>
+        </div>
+
+      </section>
+
+      <section class="advantages" id="advantages">
+        <h2 class="advantages__title backdrop-title" data-title="Преимущества">Преимущества курса</h2>
+        <p class="advantages__text">Поможем создать <span>корректный промт,</span> чтобы вы получили максимально корректный вариант под ваши нужды!</p>
+        <ul class="advantages__list benefit-list">
+          <li class="benefit-list__item">
+            <img class="benefit-list__icon" src="img/icons/business-icon.svg" alt="Business icon" width="48" height="48">
+            <h3 class="benefit__title">Хотите открыть бизнес?</h3>
+            <p class="benefit__text">Нейросеть поможет составить бизнес-план, рассчитать расходы, нарисовать логотип, найти место получше и станет вашим главным деловым партнером</p>
+          </li>
+          <li class="benefit-list__item">
+            <img class="benefit-list__icon" src="img/icons/holiday-icon.svg" alt="Holiday icon" width="48" height="48">
+            <h3 class="benefit__title">Мечтаете об отпуске?</h3>
+            <p class="benefit__text">Нейросеть поможет найти место по вашим запросам, выбрать наилучший сезон, собрать чемодан, подыскать где остановиться и сделать ваш отпуск незабываемым</p>
+          </li>
+          <li class="benefit-list__item">
+            <img class="benefit-list__icon" src="img/icons/study-icon.svg" alt="Study icon" width="48" height="48">
+            <h3 class="benefit__title">Вы студент и нуждаетесь в помощи в учебе?</h3>
+            <p class="benefit__text">Нет проблем! Нейросеть — ваш лучший друг, который поможет написать курсовую, решить сложный тест и подготовиться к экзаменам</p>
+          </li>
+          <li class="benefit-list__item">
+            <img class="benefit-list__icon" src="img/icons/healthy-icon.svg" alt="Healthy icon" width="48" height="48">
+            <h3 class="benefit__title">Интересует здоровый образ жизни?</h3>
+            <p class="benefit__text">Нейросеть поделится советами по сбалансированному питанию, безопасным тренировкам и поддержке мотивации.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+
+</div>
+<div class="modal-wrapper hidden">
+  <section class="modal" role="dialog"
+           aria-modal="true"
+           aria-labelledby="modal-title">
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button>
+    <h2 class="modal__title" id="modal-title">Овладей нейросетями!</h2>
+    <p class="modal__text">Получи в подарок доступ ко всем курсам</p>
+    <picture>
+      <source srcset="img/modal-gifts-desktop.webp, img/modal-gifts-desktop@2x.webp 2x" media="(min-width: 1024px)">
+      <img class="modal__image" src="img/modal-gifts.webp" srcset="img/modal-gifts@2x.webp 2x" alt="gifts image" width="515" height="439">
+    </picture>
+
+    <form class="modal__form form" action="#" method="post">
+      <label class="visually-hidden" for="email">E-mail</label>
+      <input class="form__input"  id="email" type="email" name="email" required autocomplete="email" placeholder="Введите e-mail">
+      <button class="form__button" type="submit">Получить доступ</button>
+    </form>
+  </section>
+</div>
+
+
+<script src="js/mobile-menu.min.js" type="module"></script>
+<script src="js/modal.min.js" type="module"></script>
+</body>
+</html>
+

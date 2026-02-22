@@ -1,0 +1,17 @@
+@use "normalize.scss";
+@use "fonts.scss";
+@use "global.scss";
+@use "utils.scss";
+@use "index.scss";
+
+
+// blocks
+@use "./blocks/page-header.scss";
+@use "./blocks/main-nav-list.scss";
+@use "./blocks/page-main.scss";
+@use "./blocks/banner.scss";
+@use "./blocks/advantages.scss";
+@use "./blocks/benefit-list.scss";
+@use "./blocks/modal.scss";
+@use "./blocks/form.scss";
+
