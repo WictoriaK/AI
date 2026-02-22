@@ -82,6 +82,8 @@
 }
 
 .banner__button {
+  position: relative;
+  z-index: 2;
   padding-inline: 2.5rem;
   display: block;
   margin: 0 auto;
