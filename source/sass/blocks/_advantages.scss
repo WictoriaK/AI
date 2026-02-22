@@ -20,7 +20,7 @@
     bottom: 75%;
     left: 50%;
     transform: translate(-50%, 0%);
-    font-size: clamp(2rem, 11.1111vw, 13.313rem);
+    font-size: clamp(2rem, 13.3333vw, 13.313rem);
     font-family: "Involve", Arial, sans-serif;
     font-weight: 900;
 
@@ -34,14 +34,25 @@
       transform: translate(-50%, 0%);
     }
 
+    @media(min-width: 937px) {
+      bottom: 40%;
+    }
+
     @include pre-desktop{
       bottom: 30%;
       transform: translate(-50%, 0%);
     }
 
+    @media(min-width: 1155px) {
+      bottom: 23%;
+    }
+
+    @media(min-width: 1250px) {
+      bottom: 0rem;
+    }
 
     @include desktop {
-      top: 6.625rem;
+      top: 6rem;
     }
 
     @include max-desktop {
